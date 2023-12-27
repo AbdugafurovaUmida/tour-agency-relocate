@@ -77,7 +77,7 @@ a{
     background-size: cover;
     background-position: center;
     height: 360px;
-    padding: 20px 16px;
+    padding: 20px 10px;
 }
 
 @media(min-width: 1300px){
@@ -162,22 +162,37 @@ letter-spacing: 3.51px;
     color: #FFF;
     text-align: center;
 font-family: Circular Std;
-font-size: 80px;
+font-size: 40px;
 font-weight: 900;
 line-height: normal;
 text-transform: lowercase;
-margin-bottom: 46px;
+margin-bottom: 18px;
+}
+
+@media(min-width: 768px){
+   .destinations__title{
+    font-size: 80px !important;
+    margin-bottom: 46px !important;
+   } 
 }
 
 
-.destinations__subtitle{
+.destinations__subtitle,.more-destinations__subtitle{
     display: block;
     color: #FFD600;
 text-align: center;
 font-family: 'Smith Allison';
-font-size: 200px;
+font-size: 130px;
 font-weight: 400;
-line-height: 82.8%; /* 165.6px */
+line-height: 68%; /* 165.6px */
+}
+
+@media(min-width: 768px){
+    .destinations__subtitle, .more-destinations__subtitle{
+        font-size: 200px !important;
+     line-height: 82.8% !important; /* 165.6px */ 
+
+    }
 }
 
 .destinations__description{
@@ -186,14 +201,20 @@ line-height: 82.8%; /* 165.6px */
     color: #FFF;
 text-align: center;
 font-family: Circular Std;
-font-size: 26px;
+font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
 
+@media(min-width: 768px){
+    .destinations__description{
+        font-size: 26px;
+    }
+}
+
 .destinations__grid{
-    margin-top: 90px;
+    margin-top: 40px;
     display: grid;
     gap : 20px;
     justify-content: center;
@@ -202,6 +223,7 @@ line-height: normal;
 
 @media(min-width: 1350px){
    .destinations__grid{
+    margin-top: 90px;
     grid-template-columns: repeat(auto-fill, 310px);
    } 
 }
@@ -209,11 +231,17 @@ line-height: normal;
 .destinations__grid-item{
     max-width: 310px;
     width: 100%;
-    max-height: 553px;
+    max-height: 400px;
     height: 100%;
     overflow: hidden;
     border-radius: 10px;
     position: relative;
+}
+
+@media(min-width: 768px){
+    .destinations__grid-item{
+            max-height: 553px;
+    }
 }
 
 .destinations__image{
@@ -244,7 +272,7 @@ line-height: normal;
     color: #FFF;
     text-align: center;
     font-family: Circular Std;
-    font-size: 40px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
@@ -253,11 +281,21 @@ line-height: normal;
     margin-bottom: 10px;
 }
 
+@media(min-width: 768px){
+   .destinations__name{
+    font-size: 40px;
+   } 
+
+   .destinations__forename{
+    font-size: 14px;
+   }
+}
+
 .destinations__forename{
     color: #FFF;
 text-align: center;
 font-family: Circular Std;
-font-size: 14px;
+font-size: 12px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
@@ -266,7 +304,21 @@ transform: translateY(-10px);
 transition: 0.3s ease-in-out;
 }
 
-.destinations__grid-item:hover .destinations__shadow{
+.destinations__shadow{
+    height: 310px;
+}
+
+.destinations__forename,.destinations__name{
+transform: translateY(0);
+}
+
+.destinations__content{
+    opacity: 1;
+    height: 40%;
+}
+
+@media(min-width:768px){
+    .destinations__grid-item:hover .destinations__shadow{
     height: 310px;
 }
 
@@ -277,6 +329,7 @@ transform: translateY(10px);
 .destinations__grid-item:hover .destinations__content{
     opacity: 1;
     height: 40%;
+}
 }
 
 .more-destinations{
@@ -295,9 +348,9 @@ transform: translateY(10px);
     color: #0CA296;
 text-align: center;
 font-family: Smith Allison;
-font-size: 200px;
+font-size: 130px;
 font-weight: 400;
-line-height: 160px;
+line-height: 68%; /* 165.6px */
 }
 
 .more-destinations__title{
@@ -305,11 +358,21 @@ line-height: 160px;
 
 text-align: center;
 font-family: Circular Std;
-font-size: 80px;
+font-size: 40px;
 font-style: normal;
 font-weight: 900;
 line-height: normal;
 text-transform: lowercase;
+}
+
+@media(min-width: 768px){
+.more-destinations__title{
+    font-size: 80px;
+}
+.more-destinations__description{
+font-size: 26px;
+margin: 24px auto 90px;
+}
 }
 
 .more-destinations__description{
@@ -317,11 +380,12 @@ text-transform: lowercase;
     color: #565656;
 text-align: center;
 font-family: Circular Std;
-font-size: 26px;
+font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
-margin: 24px auto 90px;
+margin: 24px auto 50px;
+
 }
 
 .more-destinations__grid{
@@ -491,7 +555,7 @@ transform: translateY(10px);
     background: #003531;
     background-image: url('./images/beach.png');
      background-size: 100% ;
-    height: 523px;
+    height: 300px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -499,9 +563,18 @@ transform: translateY(10px);
 
 }
 
+@media(min-width: 768px){
+    .beach-view{
+        height: 523px;
+    }
+    .beach-view::before{
+        height: 232px;
+    }
+}
+
 .beach-view::before{
    content: linear-gradient(180deg, #F5FFFE 0%, #F5FFFE 47.71%, rgba(255, 255, 255, 0.00) 100%);
-   height: 232px;
+   height: 100px;
    position: absolute;
    top: 0;
    left: 0;
