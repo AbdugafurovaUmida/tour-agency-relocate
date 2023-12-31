@@ -308,6 +308,12 @@ transition: 0.3s ease-in-out;
     height: 310px;
 }
 
+@media(min-width: 768px){
+    .destinations__shadow{
+    height: 0px;
+}
+}
+
 .destinations__forename,.destinations__name{
 transform: translateY(0);
 }
