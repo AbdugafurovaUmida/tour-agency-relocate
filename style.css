@@ -398,7 +398,7 @@ margin: 24px auto 50px;
     display: grid;
     grid-template-columns:  repeat(auto-fit, minmax(250px, 1fr));
     /* grid-auto-rows: auto auto auto auto; */
-    /* justify-content: center; */
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -575,6 +575,12 @@ transform: translateY(10px);
     }
     .beach-view::before{
         height: 232px;
+        content: linear-gradient(180deg, #F5FFFE 0%, #F5FFFE 47.71%, rgba(255, 255, 255, 0.00) 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
     }
 }
 
@@ -582,9 +588,10 @@ transform: translateY(10px);
    content: linear-gradient(180deg, #F5FFFE 0%, #F5FFFE 47.71%, rgba(255, 255, 255, 0.00) 100%);
    height: 100px;
    position: absolute;
-   top: 0;
+   top: -2px;
    left: 0;
    right: 0;
+   z-index: 3;
 }
 
 
